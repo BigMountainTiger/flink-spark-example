@@ -1,0 +1,15 @@
+{
+  "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+  "errors.retry.timeout": "1",
+  "tasks.max": "1",
+  "mode": "timestamp",
+  "timestamp.column.name": "TIMESTAMP",
+  "topic.prefix": "example_oracle_topic",
+  "connection.url": "jdbc:oracle:thin:@//host.docker.internal:1521/XEPDB1",
+  "connection.user": "system",
+  "connection.password": "docker",
+  "query": "SELECT ID, NAME, TIMESTAMP FROM ABCD.STUDENT",
+  "validate.non.null": "true",
+  "numeric.mapping": "best_fit",
+  "poll.interval.ms": "1000"
+}

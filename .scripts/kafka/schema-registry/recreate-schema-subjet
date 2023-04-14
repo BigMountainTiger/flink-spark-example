@@ -1,0 +1,36 @@
+#!/bin/bash
+
+source .scripts/kafka/confluent/.env
+
+echo
+echo "Deleting the schema subject"
+confluent schema-registry schema delete \
+    --subject "$SCHEMA_SUBJECT_NAME" \
+    --version all \
+    --permanent \
+    --api-key $SR_KEY \
+    --api-secret $SR_SECRET \
+    --environment $ENVIRONMENT_ID \
+    --force
+
+echo
+echo "Creating schema registry subject"
+confluent schema-registry schema create \
+    --type avro \
+    --subject $SCHEMA_SUBJECT_NAME \
+    --schema $SCHEMA_FILE \
+    --api-key $SR_KEY \
+    --api-secret $SR_SECRET
+
+echo
+echo "Listing schema registry subjects"
+confluent schema-registry subject list \
+    --api-key $SR_KEY \
+    --api-secret $SR_SECRET
+
+echo
+echo "Describing schema registry subject"
+confluent schema-registry subject describe $SCHEMA_SUBJECT_NAME \
+    --api-key $SR_KEY \
+    --api-secret $SR_SECRET
+

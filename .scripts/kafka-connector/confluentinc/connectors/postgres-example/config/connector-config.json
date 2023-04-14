@@ -1,0 +1,15 @@
+{
+  "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+  "errors.retry.timeout": "1",
+  "tasks.max": "1",
+  "mode": "timestamp",
+  "timestamp.column.name": "updated",
+  "topic.prefix": "example_postgres_topic",
+  "connection.url": "jdbc:postgresql://host.docker.internal:5432/exampledb",
+  "connection.user": "docker",
+  "connection.password": "docker",
+  "query": "select id, name, updated from public.student",
+  "validate.non.null": "true",
+  "numeric.mapping": "best_fit",
+  "poll.interval.ms": "1000"
+}

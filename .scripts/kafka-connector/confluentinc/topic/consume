@@ -1,0 +1,17 @@
+#!/bin/bash
+
+TOPIC=$1
+SERVER="localhost:29092"
+
+if [ -z "${TOPIC}" ]
+  then
+    echo "No topic name supplied"
+    exit 0
+fi
+
+echo
+echo "Listening to the topic ${TOPIC}"
+kafka-console-consumer.sh \
+    --bootstrap-server ${SERVER} \
+    --topic ${TOPIC} \
+    --from-beginning

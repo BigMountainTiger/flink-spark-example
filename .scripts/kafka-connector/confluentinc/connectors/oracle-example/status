@@ -1,0 +1,6 @@
+#!/bin/bash
+
+CONNECTOR_NAME="example_oracle_connector"
+curl -s -X GET -H 'Content-Type: application/json' http://localhost:8083/connectors/${CONNECTOR_NAME}/status | jq
+
+echo

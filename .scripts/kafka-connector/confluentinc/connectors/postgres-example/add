@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo This script is kept for reference only
+echo Running update will create the connector if not exists
+echo
+
+exit 0
+
+cd .scripts/kafka-connector/confluentinc/connectors/postgres-example/config
+pwd
+
+URL="127.0.0.1:8083/connectors/"
+
+curl -i -X POST -H "Accept:application/json" -H "Content-Type:application/json" ${URL} --data "@connector.json"
+
+echo

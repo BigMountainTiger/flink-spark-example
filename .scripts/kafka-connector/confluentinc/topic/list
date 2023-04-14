@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SERVER="localhost:29092"
+
+echo "Listing the topics"
+kafka-topics.sh --bootstrap-server=${SERVER} --list
+
+echo

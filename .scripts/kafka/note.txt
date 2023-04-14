@@ -1,0 +1,8 @@
+Install confluent-cli
+Download - unzip - chmod +x - Add to path
+https://docs.confluent.io/confluent-cli/current/install.html
+
+
+Install kafka cli
+https://kafka.apache.org/quickstart
+

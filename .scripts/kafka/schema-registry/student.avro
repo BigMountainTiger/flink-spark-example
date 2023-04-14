@@ -1,0 +1,15 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    }
+  ],
+  "name": "student",
+  "namespace": "com.song.example.schema",
+  "type": "record"
+}

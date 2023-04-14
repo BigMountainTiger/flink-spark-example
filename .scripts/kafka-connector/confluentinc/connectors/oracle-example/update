@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd .scripts/kafka-connector/confluentinc/connectors/oracle-example/
+pwd
+
+CONNECTOR_NAME="example_oracle_connector"
+URL="127.0.0.1:8083/connectors/${CONNECTOR_NAME}/config"
+
+curl -i -X PUT -H "Content-Type:application/json" ${URL} --data "@config/connector-config.json"
+
+echo

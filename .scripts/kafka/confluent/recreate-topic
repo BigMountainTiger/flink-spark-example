@@ -1,0 +1,19 @@
+#!/bin/bash
+
+source .scripts/kafka/confluent/.env
+
+
+echo "Deleting the topic"
+confluent kafka topic delete $TOPIC \
+    --cluster $CLUSTER_ID \
+    --force
+
+
+echo
+echo "Creating the topic"
+RETENTION=$((1*86400000))
+confluent kafka topic create $TOPIC \
+    --cluster $CLUSTER_ID \
+    --partitions 1 \
+    --config "retention.ms=$RETENTION" \
+    --if-not-exists

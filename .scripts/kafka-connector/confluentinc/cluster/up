@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd .scripts/kafka-connector/confluentinc/cluster/
+pwd
+
+docker compose up -d

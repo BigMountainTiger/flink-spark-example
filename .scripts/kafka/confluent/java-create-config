@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# https://docs.confluent.io/confluent-cli/current/command-reference/kafka/client-config/create/
+
+source .scripts/kafka/confluent/.env
+
+confluent kafka client-config create java \
+    --cluster $CLUSTER_ID --api-key $KEY --api-secret $SECRET

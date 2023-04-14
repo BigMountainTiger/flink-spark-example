@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd .scripts/kafka-connector/debezium/config/
+pwd
+
+docker compose up -d

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+kafka-console-consumer.sh \
+    --bootstrap-server localhost:29092 \
+    --topic song \
+    --from-beginning

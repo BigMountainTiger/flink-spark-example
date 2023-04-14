@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd .scripts/database/oracle/
+pwd
+
+docker compose down

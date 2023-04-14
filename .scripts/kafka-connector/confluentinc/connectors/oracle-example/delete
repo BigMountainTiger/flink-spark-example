@@ -1,0 +1,15 @@
+#!/bin/bash
+
+CONNECTOR_NAME="example_oracle_connector"
+URL="127.0.0.1:8083/connectors/${CONNECTOR_NAME}/"
+
+curl -i -X DELETE ${URL}
+
+SERVER="localhost:29092"
+TOPIC="example_oracle_topic"
+
+echo
+echo "Deleting the topic - ${TOPIC}"
+
+kafka-topics.sh --bootstrap-server ${SERVER} --delete --topic ${TOPIC}
+echo

@@ -1,0 +1,4 @@
+https://github.com/saubury/kafka-connect-oracle-cdc
+
+Download the jdbc conector and mount to the docker container
+https://www.confluent.io/hub/confluentinc/kafka-connect-jdbc

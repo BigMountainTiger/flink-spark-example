@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+CONNECTOR_NAME="example_postgres_connector"
+URL="127.0.0.1:8083/connectors/${CONNECTOR_NAME}/pause"
+curl -i -X PUT -H "Accept:application/json" ${URL} 
+
+echo

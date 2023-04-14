@@ -1,0 +1,5 @@
+https://www.youtube.com/watch?v=YZRHqRznO-o
+
+https://github.com/irtiza07/postgres_debezium_cdc
+
+https://github.com/debezium/debezium-examples/tree/main/tutorial

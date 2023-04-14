@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd flink-etl-examples/
+pwd
+
+mvn clean test -Dtest="FlinkTest#KafkaLocalTest"

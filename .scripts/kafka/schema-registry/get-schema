@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# https://docs.confluent.io/cloud/current/sr/sr-rest-apis.html#sr-rest-api-for-ccloud
+
+source .scripts/kafka/confluent/.env
+AUTH="$SR_KEY:$SR_SECRET"
+
+echo "Get the versions for the $SCHEMA_SUBJECT_NAME"
+URL="$SR_URL/subjects/$SCHEMA_SUBJECT_NAME/versions"
+curl -u $AUTH \
+    --request GET \
+    --url $URL
+
+
+echo
+echo
+echo "Get the schema for the $SCHEMA_SUBJECT_NAME"
+URL="$SR_URL/subjects/$SCHEMA_SUBJECT_NAME/versions/4"
+curl -u $AUTH \
+    --request GET \
+    --url $URL
+
+echo

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+SERVER="localhost:29092"
+TOPIC="postgres.public.student"
+
+echo "Listing the topics"
+kafka-topics.sh --bootstrap-server=${SERVER} --list
+
+echo
+echo "Listening to the topic ${TOPIC}"
+kafka-console-consumer.sh \
+    --bootstrap-server ${SERVER} \
+    --topic ${TOPIC} \
+    --from-beginning

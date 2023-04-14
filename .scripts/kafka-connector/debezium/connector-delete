@@ -1,0 +1,11 @@
+#!/bin/bash
+
+URL="127.0.0.1:8083/connectors/"
+
+curl -i -X DELETE ${URL}exampledb-connector/
+
+SERVER="localhost:29092"
+TOPIC="postgres.public.student"
+
+kafka-topics.sh --bootstrap-server ${SERVER} --delete --topic ${TOPIC}
+echo

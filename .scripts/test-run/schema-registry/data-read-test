@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source .scripts/kafka/confluent/.env
+
+cd flink-etl-examples/
+pwd
+
+mvn clean test -Dtest="SchemaRegistryTest#ReadDataTest"

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source .scripts/kafka/confluent/.env
+confluent kafka topic produce $TOPIC --cluster $CLUSTER_ID --api-key $KEY --api-secret $SECRET
